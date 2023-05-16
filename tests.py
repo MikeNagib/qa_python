@@ -57,9 +57,7 @@ class TestBooksCollector:
     def test_add_book_in_favorites_no_books_rating(self):
         collector = BooksCollector()
         collector.add_book_in_favorites('Что делать, если ваш кот хочет вас убить')
-        assert collector.get_list_of_favorites_books() == [] \
-               and collector.get_books_rating != ['Что делать, если ваш кот хочет вас убить'], 'Нельзя добавить книгу в избранное, если её нет в словаре books_rating'
-
+        assert collector.get_list_of_favorites_books() == [] , 'Нельзя добавить книгу в избранное, если её нет в словаре books_rating'
 
     def test_delete_book_from_favorites(self):
         collector = BooksCollector()
